@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Countdown tool</title>
+        
+        <style type="text/css">
+            /* START countdown tool */
+            .countdownTool {
+                max-width: 300px;
+                margin: 0 auto;
+                text-align: center;
+            }
+            .countdownTool__topText {
+                padding: 31px 10px 9px;
+                text-transform: uppercase;
+                font: 22px/26px 'GuardianEgyptian', Georgia, serif;
+                font-weight: 600;
+            }
+            .countdownTool__content {
+                display: table;
+                margin: 0 auto;
+            }
+            .countdownTool__number {
+                float: left;
+                width: 62px;
+                height: 60px;
+                margin-right: 10px;
+                padding-top: 2px;
+                background: #006860;
+                color: #fff;
+            }
+            .countdownTool__number:last-child {
+                margin-right: 0;
+            }
+            .countdownTool__number__value {
+                display: block;
+                min-height: 44px;
+                text-transform: uppercase;
+                font: bold 40px/44px Arial, sans-serif;
+                white-space: nowrap;
+            }
+            .countdownTool__number__label {
+                display: block;
+                position: relative;
+                top: -3px;
+                text-transform: uppercase;
+                font: 11px/13px Arial, sans-serif;
+                white-space: nowrap;
+            }
+            .countdownTool__botText {
+                padding: 11px 10px 0;
+                text-transform: uppercase;
+                font: 22px/26px 'GuardianEgyptian', Georgia, serif;
+                font-weight: 600;
+            }
+            .countdownTool__follow {
+                padding: 38px 10px 0;
+                text-transform: uppercase;
+                font: 11px/13px Arial, sans-serif;
+            }
+            .countdownTool__follow a {
+                border-bottom: 1px solid #006860;
+                text-decoration: none;
+                color: #006860;
+            }
+            .countdownTool__follow a:hover {
+                border-bottom-color: transparent;
+                text-decoration: none;
+                color: #006860;
+            }
+            /* END countdown tool */
+        </style>
+    </head>
+    <body>
+        
+        <div id="countdownTool" class="countdownTool">
+            <div class="countdownTool__topText">Der er:</div>
+            <div class="countdownTool__content">
+                <div class="countdownTool__number">
+                    <span class="countdownTool__number__value countdownToolDays">00</span>
+                    <span class="countdownTool__number__label">dage</span>
+                </div>
+                <div class="countdownTool__number">
+                    <span class="countdownTool__number__value countdownToolHours">00</span>
+                    <span class="countdownTool__number__label">timer</span>
+                </div>
+                <div class="countdownTool__number">
+                    <span class="countdownTool__number__value countdownToolMinutes">00</span>
+                    <span class="countdownTool__number__label">minutter</span>
+                </div>
+                <div class="countdownTool__number">
+                    <span class="countdownTool__number__value countdownToolSeconds">00</span>
+                    <span class="countdownTool__number__label">sekunder</span>
+                </div>
+            </div>
+            <div class="countdownTool__botText">til valgstederne åbner</div>
+            <div class="countdownTool__follow">
+                <a href="#">Følg med her</a>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            function countdownTool(el, date) {
+                if (!el) {
+                    return;
+                }
+
+                // define time units
+                var s = 1000, // seconds
+                    m = s * 60, // minutes
+                    h = m * 60, // hours
+                    d = h * 24; // days
+
+                // find HTML elements for numbers
+                var daysHTML = el.getElementsByClassName('countdownToolDays')[0],
+                    hoursHTML = el.getElementsByClassName('countdownToolHours')[0],
+                    minutesHTML = el.getElementsByClassName('countdownToolMinutes')[0],
+                    secondsHTML = el.getElementsByClassName('countdownToolSeconds')[0];
+
+                function count(date) {
+                    // define timespan from current date to future date
+                    var timespan = new Date(date).getTime() - new Date().getTime();
+
+                    if (timespan >= 0) {
+                        // split timespan into units
+                        var days = Math.floor(timespan / d),
+                            hours = Math.floor((timespan % d) / h),
+                            minutes = Math.floor((timespan % h) / m),
+                            seconds = Math.floor((timespan % m) / s);
+
+                        // update numbers
+                        daysHTML.innerText = (days > 9 ? '' : '0') + days;
+                        hoursHTML.innerText = (hours > 9 ? '' : '0') + hours;
+                        minutesHTML.innerText = (minutes > 9 ? '' : '0') + minutes;
+                        secondsHTML.innerText = (seconds > 9 ? '' : '0') + seconds;
+
+                        // call again current function after 1 second
+                        setTimeout(function() {count(date)}, 1000);
+                    }
+                }
+
+                if (daysHTML && hoursHTML && minutesHTML && secondsHTML) {
+                    count(date);
+                }
+            }
+
+            countdownTool(document.getElementById('countdownTool'), 'September 1, 2021 00:00:00');
+        </script>
+        
+    </body>
+</html>

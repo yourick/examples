@@ -1,0 +1,104 @@
+/* ----- START rating ----- */
+.artRating {
+	margin: 10px 0;
+	line-height: 1;
+	font-size: 16px;
+	white-space: nowrap;
+}
+.artRating .icon-star {
+	margin-right: 7px;
+	line-height: 1;
+	font-size: 12px;
+	color: #ccc;
+}
+.artRating .icon-star.active {
+	color: #f5b323;
+}
+/* ----- END rating ----- */
+
+/* ----- START premium indicator ----- */
+.premiumIndicator {
+	display: inline-block;
+	margin-right: 2px;
+}
+.premiumIndicator .icon-premium {
+	display: table;
+	width: 52px;
+	height: 9px;
+	padding: 4px;
+	background: #000;
+	font-size: 9px;
+	color: #fff;
+}
+/* ----- END premium indicator ----- */
+
+/* ----- START text indicators ----- */
+.textIndicator,
+.premiumTextIndicator,
+.finansTextIndicator {
+	display: inline-block;
+	margin-left: 2px;
+	color: #999;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 11px;
+	font-family: Arial, sans-serif;
+	line-height: 1.1;
+}
+.textIndicator:before,
+.premiumTextIndicator:before,
+.finansTextIndicator:before {
+	content: "";
+	border-left: 1px solid #ccc;
+	display: inline-block;
+	height: 14px;
+	margin-right: 5px;
+	position: relative;
+	top: 2px;
+}
+/* ----- END text indicators ----- */
+
+/* ----- START link spacer ----- */
+.linkSpacer {
+	visibility: hidden;
+}
+/* ----- END link spacer ----- */
+
+/* ----- START Breaking news ----- */
+.bnOverlay {
+	background: #ffff0b;
+	color: #000;
+}
+.bnOverlay a {
+	color: #000;
+}
+.bnLogo {
+	padding: 8px 10px;
+	text-transform: uppercase;
+	font: 30px/1em ArialBlack, Arial, sans-serif;
+	font-weight: 900;
+	letter-spacing: -0.03em;
+}
+.bnOverlaySmall .bnLogo {
+	padding: 5px 7px;
+	font-size: 16px;
+}
+.bnTitle {
+	padding: 10px 8px 6px;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 30px;
+}
+.bnSMS {
+	position: relative;
+	top: -6px;
+	padding: 0 10px;
+	font: 10px/11px Arial, sans-serif;
+}
+.bnSMS a {
+	text-decoration: underline;
+}
+.bnSr {
+	color: #999;
+}
+/* ----- END Breaking news ----- */

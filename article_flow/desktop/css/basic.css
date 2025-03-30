@@ -1,0 +1,369 @@
+/* ----- START Basic Style ----- */
+* {
+	margin: 0;
+	padding: 0;
+}
+html, body {
+	background: #fff;
+	color: #000;
+	font-size: 13px;
+	font-family: Georgia, serif;
+}
+a {
+	color: #006860;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a img {
+	display: block;
+	border: 0;
+}
+h1 {
+	font: bold 30px/34px Georgia, serif;
+}
+h2 {
+	font: bold 30px/34px Georgia, serif;
+}
+h3 {
+	font: bold 22px/25px Georgia, serif;
+}
+h4 {
+	font: bold 20px/22px Georgia, serif;
+}
+h5 {
+	font: bold 18px/22px Georgia, serif;
+}
+h6 {
+	font: bold 13px/16px Georgia, serif;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	display: block;
+	color: #000;
+}
+
+/* START Arial Black fallback */
+@font-face {
+	font-family: ArialBlack;
+	src: local('Arial Black');
+	font-weight: 900;
+}
+/* END Arial Black fallback */
+/* ----- END Basic Style ----- */
+
+/* ----- START Common Classes ----- */
+/* START MICRO CLEARFIX for floating elements. Add class cfix to the holder */
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cfix:before,
+.cfix:after {
+	display: table; /* 1 */
+	content: " "; /* 2 */
+}
+.cfix:after {
+	clear: both;
+}
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cfix {
+	*zoom: 1;
+}
+/* END MICRO CLEARFIX for floating elements */
+/* ----- END Common Classes ----- */
+
+/* ----- START font icons default ----- */
+@font-face {
+	font-family: 'JPIcons';
+	src:url('icons/JPIcons.eot?7mq6rs');
+	src:url('icons/JPIcons.eot?7mq6rs') format('embedded-opentype'),
+		url('icons/JPIcons.ttf?7mq6rs') format('truetype'),
+		url('icons/JPIcons.woff?7mq6rs') format('woff'),
+		url('icons/JPIcons.svg?7mq6rs#JPIcons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-transform: none;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-family: 'JPIcons';
+	line-height: 1;
+}
+.icon-magglass:before {
+	content: "\e60a";
+}
+.icon-facebook:before {
+	content: "\e600";
+}
+.icon-jp:before {
+	content: "\e601";
+}
+.icon-img-resize:before {
+	content: "\e602";
+}
+.icon-linkedin:before {
+	content: "\e603";
+}
+.icon-mail:before {
+	content: "\e604";
+}
+.icon-print:before {
+	content: "\e605";
+}
+.icon-quote:before {
+	content: "\e606";
+}
+.icon-save:before {
+	content: "\e607";
+}
+.icon-save-white:before {
+	content: "\e608";
+}
+.icon-twitter:before {
+	content: "\e609";
+}
+.icon-arrow-down:before {
+	content: "\e610";
+}
+.icon-arrow-up:before {
+	content: "\e611";
+}
+.icon-key:before {
+	content: "\e613";
+}
+.icon-play:before {
+	content: "\e614";
+}
+.icon-arrow-left:before {
+	content: "\e615";
+}
+.icon-arrow-right:before {
+	content: "\e616";
+}
+.icon-jyllands-posten:before {
+	content: "\e60b";
+}
+.icon-premium:before {
+	content: "\e60c";
+}
+.icon-checkbox:before {
+	content: "\e61b";
+}
+.icon-cross:before {
+	content: "\e61c";
+}
+.icon-pencil:before {
+	content: "\e61d";
+}
+.icon-o:before {
+	content: "\e61e";
+}
+.icon-tag:before {
+	content: "\e61f";
+}
+.icon-settings:before {
+	content: "\e617";
+}
+.icon-instagram:before {
+	content: "\e620";
+}
+.icon-comment:before {
+	content: "\e621";
+}
+.icon-star:before {
+	content: "\e60e";
+}
+.icon-close:before {
+	content: "\e60f";
+}
+.icon-attention:before {
+	content: "\e618";
+}
+.icon-attention:after {
+	content: "\e619";
+}
+.icon-filter:before {
+	content: "\e622";
+}
+.icon-calendar:before {
+	content: "\e623";
+}
+.icon-safari-share:before {
+	content: "\e802";
+}
+.icon-guide-dk:before {
+	content: "\e900";
+}
+.icon-lokal:before {
+	content: "\e901";
+}
+.icon-avisen:before {
+	content: "\e902";
+}
+.icon-avisen:after {
+	content: "\e904";
+}
+.icon-aarhus:after {
+	content: "\e903";
+}
+.icon-refresh:before {
+	content: "\e905";
+}
+.icon-person-placeholder:before {
+	content: "\e906";
+}
+.icon-login:before {
+	content: "\e907";
+}
+.icon-investor:before {
+	content: "\e908";
+}
+.icon-stock-up:before {
+	content: "\e909";
+}
+.icon-stock-down:before {
+	content: "\e90a";
+}
+.icon-lock-open:before {
+	content: "\e90b";
+}
+.icon-watch:before {
+	content: "\e90c";
+}
+.icon-bookmark-o:before {
+	content: "\e90d";
+}
+.icon-bookmark:before {
+	content: "\e90e";
+}
+.icon-arrow-down-sm:before {
+	content: "\e90f";
+}
+.icon-arrow-up-sm:before {
+	content: "\e910";
+}
+/* ----- END font icons default ----- */
+
+/* ----- START font icons custom ----- */
+[class^="icon-"],
+[class*=" icon-"] {
+	display: inline-block;
+	color: #000;
+	text-align: center;
+	font-size: 26px;
+}
+.bdrIcon {
+	border-radius: 50%;
+	color: #fff;
+	cursor: pointer;
+}
+.bdrIcon:hover {
+	color: #fff;
+}
+.toolIconBox {
+	margin: 10px 0;
+}
+.toolIcon {
+	margin: 0 5px;
+	cursor: pointer;
+}
+.toolIcon:hover {
+	text-decoration: none;
+}
+.toolIcon.fL:first-child {
+	margin-left: 0;
+}
+.icon-instagram {
+	background: #4675b4;
+}
+.icon-instagram:before {
+	position: relative;
+	top: -1px;
+ }
+.icon-attention {
+	position: relative;
+	z-index: 1;
+	font-size: 16px;
+	color: #21bcf2;
+}
+.icon-attention span {
+	background: #fff;
+	z-index: -1;
+}
+.icon-attention:after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #000;
+}
+.icon-lokal {
+	color: #002467;
+	font-size: 23px;
+}
+.icon-avisen {
+	position: relative;
+	font-size: 23px;
+	color: #f57238;
+	line-height: normal;
+}
+.icon-avisen:after {
+	color: #002467;
+	font-size: 0.19em;
+	position: absolute;
+	top: 1px;
+	right: 0;
+	left: -10px;
+}
+.icon-key {
+	color: #ad9572;
+	font-size: 7px;
+}
+.icon-play {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	width: 26px;
+	height: 26px;
+	padding: 8px 17px 8px 19px;
+	background: #000;
+	opacity: 0.65;
+	font-size: 26px;
+	color: #fff;
+	cursor: pointer;
+}
+.gridCol220 .icon-play,
+.gridCol200 .icon-play,
+.gridCol140 .icon-play,
+.artRel .icon-play {
+	width: 18px;
+	height: 18px;
+	padding: 6px 13px 6px 14px;
+	font-size: 18px;
+}
+/* ----- END font icons custom ----- */
+
+/* ----- START basic elements ----- */
+/* START Main Breaker */
+.mainBreaker {
+	overflow: hidden;
+	margin: 10px 0;
+	height: 0;
+	border-top: 1px solid #ccc;
+}
+/* END Main Breaker */
+/* ----- END basic elements ----- */

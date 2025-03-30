@@ -1,0 +1,796 @@
+/* ----- START article flow basic styles ----- */
+.artBox {
+	margin-bottom: 13px;
+}
+.artBox:after {
+	display: table;
+	clear: both;
+	content: " ";
+}
+.artBox:last-child {
+	margin-bottom: 0 !important;
+}
+.artBox + .mainBreaker {
+	margin: 13px 0 15px;
+}
+.artBoxBgGray {
+	margin-bottom: 15px;
+	padding: 10px 0;
+	background: #eee;
+}
+.artBoxBgGray + .mainBreaker {
+	margin-top: 15px;
+}
+.artData {
+	position: relative;
+	top: -2px;
+	color: #999;
+	text-transform: uppercase;
+	font: 11px/13px Arial, sans-serif;
+}
+.artSec,
+.artDateTime,
+.artTopik {
+	margin-right: 4px;
+	color: #999;
+}
+.artDataPrefix {
+	font-weight: bold;
+	color: #000;
+}
+.artUpdated {
+	margin-right: 4px;
+	padding-left: 7px;
+	border-left: 1px solid #999;
+	text-transform: uppercase;
+	color: #f00;
+	font-weight: bold;
+}
+.artImgBox {
+	position: relative;
+}
+.artImgBox img {
+	display: block;
+	max-width: 100%;
+}
+.artTitle {
+	font-weight: bold;
+}
+.artKicker {
+	color: #888;
+}
+.artDesc {
+	color: #666;
+	font-size: 15px;
+	line-height: 20px;
+}
+
+/* START universal elements in artBox */
+.artBox .icon-key {
+	position: relative;
+	top: -1px;
+	margin-left: 2px;
+}
+.artBox .icon-quote {
+	margin-right: 11px;
+	color: #000;
+	font-size: 0.8em;
+}
+.artBox .artRating {
+	margin: 10px 0 0;
+}
+.artBox .finansIndicator,
+.artBox .premiumIndicator {
+	margin-right: 11px;
+}
+.artBox .artByline,
+.article .artBox .artByline {
+	margin: 0;
+	color: #999;
+	text-transform: uppercase;
+	font: 12px/15px Arial, sans-serif;
+}
+.artBox .artByline a,
+.article .artBox .artByline a {
+	color: #999;
+}
+.artBox .tagNameBox {
+	margin: 10px 0 0;
+}
+.artImgBox .premiumIndicator {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+}
+.artImgBox .premiumIndicator .icon-premium {
+	width: 69px;
+	height: 12px;
+	padding: 5px;
+	font-size: 12px;
+}
+/* END universal elements in artBox */
+
+/* START article relations */
+.artRel {
+	padding: 3px 0;
+}
+.artRelList {
+	list-style: none;
+	font-size: 17px;
+	line-height: 18px;
+}
+.artRelList .icon-quote,
+.artRelList .finansIndicator,
+.artRelList .premiumIndicator {
+	margin-right: 9px;
+}
+.artRelLink {
+	position: relative;
+	display: table;
+	margin-top: 10px;
+	padding-left: 17px;
+}
+.artRelLink:first-child {
+	margin-top: 0;
+}
+.artRelLink:before {
+	position: absolute;
+	left: 1px;
+	display: inline-block;
+	margin-top: -1px;
+	color: #000;
+	content: "\2022";
+	vertical-align: top;
+	font: normal 23px Georgia, serif;
+	line-height: inherit;
+}
+.artRelLink a {
+	color: #000;
+}
+
+/* START inline relations */
+.artRelInline {
+	padding: 0;
+}
+.artRelInline .artRelList {
+	line-height: 24px;
+}
+.artRelInline .artRelLink {
+	display: inline;
+	margin-top: 0;
+	margin-right: 3px;
+	padding-left: 0;
+}
+.artRelInline .artRelLink:before {
+	position: relative;
+	margin-right: 4px;
+}
+/* END inline relations */
+
+/* START big relations */
+.artRelBig {
+	padding: 0;
+}
+.artRelBig .artRelLink {
+	display: block;
+	padding-left: 0;
+}
+.artRelBig .artRelLink:before {
+	display: none;
+}
+.artRelBig .artImgBox {
+	float: right;
+	margin: 0 0 2px 10px;
+	z-index: 1;
+}
+.artRelBigTitle {
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 24px;
+}
+.artRelBigDesc {
+	margin-top: 2px;
+	font-size: 15px;
+	line-height: 20px;
+	color: #666;
+}
+/* END big relations */
+
+.artRelLink.premLogoBox:before {
+	display: none;
+}
+/* END article relations */
+
+/* START article left/right image */
+.artNoImg .artTitle .finansIndicator,
+.artNoImg .artTitle .premiumIndicator,
+.artImgRight .artTitle .finansIndicator,
+.artImgRight .artTitle .premiumIndicator,
+.artImgLeft .artTitle .finansIndicator,
+.artImgLeft .artTitle .premiumIndicator {
+	display: table;
+	margin: 0 0 5px;
+}
+.artImgLeft .artImgBox {
+	float: left;
+	margin: 0 10px 2px 0;
+	z-index: 1;
+}
+.artImgRight .artImgBox {
+	float: right;
+	margin: 0 0 2px 10px;
+	z-index: 1;
+}
+.artImgRight .artData {
+	float: left;
+}
+.artImgRight .artTitle {
+	clear: left;
+}
+/* END article left/right image */
+
+/* START article top story */
+.artTopStory {
+	margin-bottom: 15px;
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+	padding: 8px 0 24px;
+}
+.artTopStory .artData {
+	font-size: 14px;
+	line-height: 15px;
+}
+.artTopStory.artImgRight .artData {
+	float: none;
+}
+.artTopStory.artBoxOverlay .artCaption,
+.artTopStory.artBoxWhiteOverlay .artCaption {
+	bottom: 24px;
+}
+.artTopStory .bnOverlay {
+	margin-top: 5px;
+}
+/* END article top story */
+
+/* START article overlay */
+.artBoxOverlay {
+	position: relative;
+	margin-bottom: 15px;
+}
+.artBoxOverlay + .mainBreaker {
+	margin-top: 15px;
+}
+.artBoxOverlay .artCaption {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: #000;
+	background: rgba(0,0,0,0.7);
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 13px 10px 15px;
+	color: #fff;
+}
+.artBoxOverlay .artCaption a {
+	color: #fff;
+}
+.artBoxOverlay .artCaption .artKicker {
+	color: #aaa;
+}
+.artBoxOverlay .artCaption .artTitle {
+	color: #fff;
+}
+.artBoxOverlay .artCaption .icon-quote {
+	color: #fff;
+}
+.artBoxOverlay .artCaption .artDesc {
+	color: #fff;
+}
+.artBoxOverlay .artCaption .artRelLink:before {
+	color: #fff;
+}
+/* END article overlay */
+
+/* START article white overlay */
+.artBoxWhiteOverlay {
+	position: relative;
+	margin-bottom: 15px;
+}
+.artBoxWhiteOverlay + .mainBreaker {
+	margin-top: 15px;
+}
+.artBoxWhiteOverlay .artCaption {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: #f0f0f0;
+	background: rgba(255,255,255,0.9);
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 13px 10px 15px;
+}
+/* END article white overlay */
+
+/* first child in artBox shouldn't has margin-top */
+.artData:first-child,
+.artTitle:first-child,
+.artImgBox:first-child,
+.artByline:first-child,
+.artDesc:first-child,
+.artRel:first-child,
+.artBox .artRating:first-child {
+	margin-top: 0 !important;
+}
+/* ----- END Article flow basic styles  ----- */
+
+/* ----- START article flow 940 ----- */
+.artBox940 .artImgBox {
+	margin-top: 2px;
+}
+.artBox940 .artTitle + .artImgBox {
+	margin-top: 12px;
+}
+.artBox940 .bnOverlay + .artImgBox {
+	margin-top: 0;
+}
+.artBox940 .artTitle {
+	font-weight: bold;
+	font-size: 42px;
+	line-height: 46px;
+}
+.artBox940 .artImgBox + .artTitle,
+.artBox940 .bnOverlay + .artTitle {
+	margin-top: 8px;
+}
+.artBox940 .artByline {
+	margin-top: 7px;
+}
+.artBox940 .artDesc {
+	margin-top: 8px;
+	font-size: 17px;
+	line-height: 24px;
+}
+.artBox940 .artByline + .artDesc {
+	margin-top: 4px;
+}
+.artBox940 .artRating + .artDesc {
+	margin-top: 8px;
+}
+.artBox940 .artRel {
+	margin-top: 8px;
+}
+.artBox940 .artImgBox + .artRel {
+	margin-top: 12px;
+}
+.artBox940 .artTitle + .artRel {
+	margin-top: 12px;
+}
+.artBox940 .artRelBig + .artRel {
+	margin-top: 9px;
+}
+.artBox940 .artRelBig {
+	margin-top: 9px;
+}
+.artBox940 .artImgBox + .artRelBig {
+	margin-top: 19px;
+}
+.artBox940 .artTitle + .artRelBig {
+	margin-top: 13px;
+}
+.artBox940 .artRelList {
+	font-size: 18px;
+	line-height: 20px;
+}
+.artBox940 .artRelInline .artRelList {
+	line-height: 26px;
+}
+.artBox940 .artRelBigTitle {
+	font-size: 22px;
+	line-height: 26px;
+}
+.artBox940 .artRelBigDesc {
+	font-size: 16px;
+	line-height: 22px;
+}
+
+/* START article 940 top story */
+.artBox940.artTopStory .artImgBox {
+	margin-top: 10px;
+}
+.artBox940.artTopStory .artTitle + .artImgBox {
+	margin-top: 14px;
+}
+.artBox940.artTopStory .bnOverlay + .artImgBox {
+	margin-top: 0;
+}
+.artBox940.artTopStory .artTitle {
+	margin-top: 5px;
+}
+.artBox940.artTopStory .artImgBox + .artTitle,
+.artBox940.artTopStory .bnOverlay + .artTitle {
+	margin-top: 8px;
+}
+/* END article 940 top story */
+/* ----- END article flow 940 ----- */
+
+/* ----- START article flow 620 ----- */
+.artBox620 .artImgBox {
+	margin-top: 2px;
+}
+.artBox620 .artTitle + .artImgBox {
+	margin-top: 12px;
+}
+.artBox620 .bnOverlay + .artImgBox {
+	margin-top: 0;
+}
+.artBox620 .artTitle {
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 36px;
+}
+.artBox620 .artImgBox + .artTitle,
+.artBox620 .bnOverlay + .artTitle {
+	margin-top: 8px;
+}
+.artBox620 .artTitle .premiumIndicator {
+	margin-bottom: -1px;
+}
+.artBox620 .artTitle .finansIndicator {
+	margin-bottom: -3px;
+}
+.artBox620.artNoImg .artTitle .finansIndicator,
+.artBox620.artNoImg .artTitle .premiumIndicator,
+.artBox620.artImgRight .artTitle .finansIndicator,
+.artBox620.artImgRight .artTitle .premiumIndicator,
+.artBox620.artImgLeft .artTitle .finansIndicator,
+.artBox620.artImgLeft .artTitle .premiumIndicator {
+	margin-bottom: 5px;
+}
+.artBox620 .artByline {
+	margin-top: 5px;
+}
+.artBox620 .artDesc {
+	margin-top: 3px;
+	font-size: 16px;
+	line-height: 22px;
+}
+.artBox620 .artByline + .artDesc {
+	margin-top: 4px;
+}
+.artBox620 .artRating + .artDesc {
+	margin-top: 8px;
+}
+.artBox620 .artRel {
+	margin-top: 8px;
+}
+.artBox620 .artImgBox + .artRel {
+	margin-top: 12px;
+}
+.artBox620 .artTitle + .artRel {
+	margin-top: 10px;
+}
+.artBox620 .artRelBig + .artRel {
+	margin-top: 9px;
+}
+.artBox620 .artRelBig {
+	margin-top: 9px;
+}
+.artBox620 .artImgBox + .artRelBig {
+	margin-top: 19px;
+}
+.artBox620 .artTitle + .artRelBig {
+	margin-top: 11px;
+}
+.artBox620.artImgRight .artImgBox {
+	margin-top: 0;
+}
+.artBox620.artImgLeft .artTitle,
+.artBox620.artImgRight .artTitle {
+	margin-bottom: 5px;
+	font-size: 26px;
+	line-height: 30px;
+}
+.artBox620.artImgRight .artImgBox + .artTitle {
+	margin-top: 0;
+}
+.artBox620.artImgLeft .artImgBox + .artTitle {
+	margin-top: 2px;
+}
+.artBox620.artImgLeft .artImgBox:first-child + .artTitle {
+	margin-top: 0;
+}
+.artBox620.artImgLeft .bnOverlay + .artImgBox,
+.artBox620.artImgLeft .bnOverlay + .artImgBox + .artTitle,
+.artBox620.artImgRight .bnOverlay + .artImgBox,
+.artBox620.artImgRight .bnOverlay + .artImgBox + .artTitle {
+	margin-top: 10px;
+}
+.artBox620.artBoxWhiteOverlay .artCaption .artTitle {
+	font-size: 32px;
+}
+
+/* START article 620 top story */
+.artBox620.artTopStory .artImgBox {
+	margin-top: 10px;
+}
+.artBox620.artTopStory .artTitle + .artImgBox {
+	margin-top: 14px;
+}
+.artBox620.artTopStory .bnOverlay + .artImgBox {
+	margin-top: 0;
+}
+.artBox620.artTopStory .artTitle {
+	margin-top: 5px;
+	font-size: 32px;
+	line-height: 36px;
+}
+.artBox620.artTopStory .artImgBox + .artTitle,
+.artBox620.artTopStory .bnOverlay + .artTitle {
+	margin-top: 8px;
+}
+.artBox620.artTopStory.artImgRight .artImgBox {
+	margin-top: 5px;
+}
+.artBox620.artTopStory.artImgRight .artTitle {
+	font-size: 26px;
+	line-height: 30px;
+}
+.artBox620.artTopStory.artImgRight .artImgBox + .artTitle {
+	margin-top: 5px;
+}
+.artBox620.artTopStory.artImgRight .artImgBox:first-child + .artTitle {
+	margin-top: 0;
+}
+.artBox620.artTopStory.artImgLeft .bnOverlay + .artImgBox,
+.artBox620.artTopStory.artImgLeft .bnOverlay + .artImgBox + .artTitle,
+.artBox620.artTopStory.artImgRight .bnOverlay + .artImgBox,
+.artBox620.artTopStory.artImgRight .bnOverlay + .artImgBox + .artTitle {
+	margin-top: 10px;
+}
+/* END article 620 top story */
+/* ----- END article flow 620 ----- */
+
+/* ----- START article flow 460/400/300 ----- */
+.artBox460 .artImgBox,
+.artBox400 .artImgBox,
+.artBox300 .artImgBox {
+	margin-top: 2px;
+}
+.artBox460 .bnOverlay + .artImgBox,
+.artBox400 .bnOverlay + .artImgBox,
+.artBox300 .bnOverlay + .artImgBox {
+	margin-top: 0;
+}
+.artBox460 .artTitle,
+.artBox400 .artTitle,
+.artBox300 .artTitle {
+	font-weight: normal;
+	font-size: 22px;
+	line-height: 24px;
+}
+.artBox460 .artImgBox + .artTitle,
+.artBox400 .artImgBox + .artTitle,
+.artBox300 .artImgBox + .artTitle,
+.artBox460 .bnOverlay + .artTitle,
+.artBox400 .bnOverlay + .artTitle,
+.artBox300 .bnOverlay + .artTitle {
+	margin-top: 7px;
+}
+.artBox460 .artByline,
+.artBox400 .artByline,
+.artBox300 .artByline {
+	margin-top: 5px;
+}
+.artBox460 .artDesc,
+.artBox400 .artDesc,
+.artBox300 .artDesc {
+	margin-top: 3px;
+}
+.artBox460 .artDesc {
+	line-height: 22px;
+	font-size: 16px;
+}
+.artBox460 .artByline + .artDesc,
+.artBox400 .artByline + .artDesc,
+.artBox300 .artByline + .artDesc {
+	margin-top: 4px;
+}
+.artBox460 .artRating + .artDesc,
+.artBox400 .artRating + .artDesc,
+.artBox300 .artRating + .artDesc {
+	margin-top: 8px;
+}
+.artBox460 .artRel,
+.artBox400 .artRel,
+.artBox300 .artRel {
+	margin-top: 10px;
+}
+.artBox460 .artTitle + .artRel,
+.artBox400 .artTitle + .artRel,
+.artBox300 .artTitle + .artRel {
+	margin-top: 12px;
+}
+.artBox460 .artRelList,
+.artBox400 .artRelList,
+.artBox300 .artRelList {
+	font-size: 16px;
+}
+.artBox460.artBriefMode .artTitle,
+.artBox400.artBriefMode .artTitle,
+.artBox300.artBriefMode .artTitle {
+	font-size: 24px;
+	line-height: 28px;
+}
+.artBox300SimpleList .artNoImg .artSec {
+	position: absolute;
+	top: 4px;
+	font-size: 14px;
+	line-height: 18px;
+}
+.artBox300SimpleList .artNoImg .artTitle {
+	padding-left: 46px;
+	font-size: 15px;
+	line-height: 20px;
+}
+.artBox300.artImgRight img,
+.artBox300.artImgLeft img {
+	width: 140px;
+}
+.artBox300.artImgRight .artTitle,
+.artBox.artImgLeft .artTitle {
+	margin-top: 2px;
+}
+
+/* START article 460/400/300 top story */
+.artBox460.artTopStory .artImgBox,
+.artBox400.artTopStory .artImgBox,
+.artBox300.artTopStory .artImgBox {
+	margin-top: 10px;
+}
+.artBox460.artTopStory .artTitle + .artImgBox,
+.artBox400.artTopStory .artTitle + .artImgBox,
+.artBox300.artTopStory .artTitle + .artImgBox {
+	margin-top: 14px;
+}
+.artBox460.artTopStory .bnOverlay + .artImgBox,
+.artBox400.artTopStory .bnOverlay + .artImgBox,
+.artBox300.artTopStory .bnOverlay + .artImgBox {
+	margin-top: 0;
+}
+.artBox460.artTopStory .artTitle,
+.artBox400.artTopStory .artTitle,
+.artBox300.artTopStory .artTitle {
+	margin-top: 5px;
+}
+.artBox460.artTopStory .artImgBox + .artTitle,
+.artBox400.artTopStory .artImgBox + .artTitle,
+.artBox300.artTopStory .artImgBox + .artTitle,
+.artBox460.artTopStory .bnOverlay + .artTitle,
+.artBox400.artTopStory .bnOverlay + .artTitle,
+.artBox300.artTopStory .bnOverlay + .artTitle {
+	margin-top: 8px;
+}
+/* END article 460/400/300 top story */
+/* ----- END article flow 460/400/300 ----- */
+
+/* ----- START article flow 220/200 ----- */
+.artBox220,
+.artBox200 {
+	margin-bottom: 8px;
+}
+.artBox220 + .mainBreaker,
+.artBox200 + .mainBreaker {
+	margin: 8px 0 10px;
+}
+.artBox220 .artImgBox,
+.artBox200 .artImgBox {
+	margin-top: 2px;
+}
+.artBox220 .bnOverlay + .artImgBox,
+.artBox200 .bnOverlay + .artImgBox {
+	margin-top: 0;
+}
+.artBox220 .artTitle,
+.artBox200 .artTitle {
+	font-weight: normal;
+	font-size: 22px;
+	line-height: 24px;
+}
+.artBox220 .artImgBox + .artTitle,
+.artBox200 .artImgBox + .artTitle,
+.artBox220 .bnOverlay + .artTitle,
+.artBox200 .bnOverlay + .artTitle {
+	margin-top: 7px;
+}
+.artBox220 .artByline,
+.artBox200 .artByline {
+	margin-top: 5px;
+}
+.artBox220 .artDesc,
+.artBox200 .artDesc {
+	margin-top: 3px;
+}
+.artBox220 .artByline + .artDesc,
+.artBox200 .artByline + .artDesc {
+	margin-top: 4px;
+}
+.artBox220 .artRating + .artDesc,
+.artBox200 .artRating + .artDesc {
+	margin-top: 8px;
+}
+.artBox220 .artRel,
+.artBox200 .artRel {
+	margin-top: 8px;
+}
+.artBox220 .artTitle + .artRel,
+.artBox200 .artTitle + .artRel {
+	margin-top: 10px;
+}
+.artBox220 .artRelList,
+.artBox200 .artRelList {
+	font-size: 16px;
+}
+.artBox220.artBriefMode .artTitle,
+.artBox200.artBriefMode .artTitle {
+	font-size: 16px;
+	line-height: 18px;
+}
+/* ----- END article flow 220/200 ----- */
+
+/* ----- START article flow 140 ----- */
+.artBox140 {
+	margin-bottom: 8px;
+}
+.artBox140 + .mainBreaker {
+	margin: 8px 0 10px;
+}
+.artBox140 .icon-quote {
+	margin-right: 9px;
+}
+.artBox140 .artImgBox {
+	margin-top: 2px;
+}
+.artBox140 .bnOverlay + .artImgBox {
+	margin-top: 0;
+}
+.artBox140 .artImgBox .premiumIndicator .icon-premium {
+	width: 52px;
+	height: 9px;
+	padding: 4px;
+	font-size: 9px;
+}
+.artBox140 .artTitle {
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 22px;
+	overflow: hidden;
+}
+.artBox140 .artImgBox + .artTitle,
+.artBox140 .bnOverlay + .artTitle {
+	margin-top: 7px;
+}
+.artBox140 .artRating .icon-star {
+	margin-right: 6px;
+	font-size: 11px;
+}
+.artBox140 .artByline,
+.article .artBox140 .artByline {
+	margin-top: 5px;
+}
+.artBox140 .artDesc {
+	margin-top: 3px;
+}
+.artBox140 .artByline + .artDesc {
+	margin-top: 4px;
+}
+.artBox140 .artRating + .artDesc {
+	margin-top: 8px;
+}
+.artBox140.artBriefMode .artTitle {
+	font-size: 16px;
+	line-height: 18px;
+}
+/* ----- END article flow 140 ----- */

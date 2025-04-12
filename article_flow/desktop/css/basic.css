@@ -366,4 +366,25 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	border-top: 1px solid #ccc;
 }
 /* END Main Breaker */
+
+/* START Spacers */
+.smallSpacer {
+	height: 0;
+	margin-bottom: 20px;
+	font-size: 0;
+	line-height: 0;
+}
+.mainSpacer {
+	height: 0;
+	margin-bottom: 25px;
+	font-size: 0;
+	line-height: 0;
+}
+.bigSpacer {
+	height: 0;
+	margin-bottom: 30px;
+	font-size: 0;
+	line-height: 0;
+}
+/* END Spacers */
 /* ----- END basic elements ----- */

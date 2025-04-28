@@ -23,14 +23,19 @@
 	top: 0;
 	left: 0;
 	z-index: 2001;
+	display: -webkit-flex;
 	display: flex;
+	-webkit-justify-content: center;
 	justify-content: center;
+	-webkit-align-items: center;
     align-items: center;
 	width: 100%;
 	height: 100%;
 }
 .nloOverlay__box {
+	display: -webkit-flex;
 	display: flex;
+	-webkit-flex-direction: column;
     flex-direction: column;
 	width: 100%;
 	height: 100%;
@@ -40,6 +45,7 @@
 }
 .nloOverlay__header {
 	position: relative;
+	-webkit-flex: 0 0 auto;
 	flex: 0 0 auto;
 	padding: 34px 10px 15px;
 	background: #000;
@@ -67,7 +73,7 @@
 }
 .nloOverlay__header__close__icon:before, 
 .nloOverlay__header__close__icon:after {
-	content: '';
+	content: " ";
 	position: absolute;
 	top: 8px;
 	left: 0;
@@ -83,9 +89,11 @@
 	transform: rotate(-45deg);
 }
 .nloOverlay__content {
+	-webkit-flex: 1 1 auto;
 	flex: 1 1 auto;
     overflow-x: hidden;
     overflow-y: auto;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
     height: 100%;
 }

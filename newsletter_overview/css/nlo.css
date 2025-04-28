@@ -259,6 +259,7 @@ button.nlo__inp {
 .nlo__section__teaser {
 	width: 100%;
 	padding: 10px;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 .nlo__section__teaser__in {
@@ -272,7 +273,7 @@ button.nlo__inp {
 	background: #999;
 }
 .nlo__section__teaser__header:before {
-	content: '';
+	content: " ";
 	display: block;
 	height: 0;
 	padding-top: 40%;
@@ -280,6 +281,8 @@ button.nlo__inp {
 .nlo__section__teaser__image {
 	position: absolute;
 	top: 0;
+	right: 0;
+	bottom: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;

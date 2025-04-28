@@ -1,0 +1,568 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+		<link href="css/nlo.css" rel="stylesheet" type="text/css"/>
+		<link href="css/nlo_overlay.css" rel="stylesheet" type="text/css"/>
+		<title>Newsletter overview</title>
+		<style>
+			html,
+			body {
+				margin: 0;
+				padding: 0;
+				background: #fff;
+			}
+		</style>
+	</head>
+	<body>
+
+		<br/><br/>
+
+		<div class="nlo">
+			<div class="nlo__in1">
+				<div class="nlo__in2">
+
+					<!-- state: unauthorized user, permission checkbox -->
+					<form class="nlo__email">
+						<div class="nlo__email__text">
+							Tilmeld dig Jyllands-Postens nyhedsbreve og få leveret kniv skap journalistik direkte i din indbakke.
+							<br/>
+							Indtast din e-mail og vælg hvilket indhold du ønsker at modtage.
+						</div>
+						<div class="nlo__email__status">
+							E-mail
+						</div>
+						<div class="nlo__email__data">
+							<input class="nlo__inp" type="text" placeholder="Indtast din e-mail"/>
+							<button class="nlo__btn">Ok</button>
+						</div>
+						<div class="nlo__email__permissions">
+							<div class="nlo__checkbox">
+								<input id="nloCheckboxInp" type="checkbox"/>
+								<label for="nloCheckboxInp">Ja, Jyllands-Postens må gerne kontakte mig med tilbud, konkurrencer og  informationer, via mail, sms og telefon. Jeg kan til en hver tid begrænse eller tilbagekalde mit samtykke.</label>
+								<a class="nlo__email__permissions__link" href="#">Læs mere her</a>
+							</div>
+							<div class="nloOverlay">
+								<div class="nloOverlay__bg"></div>
+								<div class="nloOverlay__wrap">
+									<div class="nloOverlay__box">
+										<div class="nloOverlay__header">
+											<a class="nloOverlay__header__close" href="#">
+												<i class="nloOverlay__header__close__icon"></i>
+											</a>
+											<div class="nloOverlay__header__name">Vilkår</div>
+										</div>
+										<div class="nloOverlay__content">
+											<div class="nloOverlay__content__text">
+												Jeg giver samtykke til, at Jyllands-Posten må kontakte mig på mail, sms og telefon med aktuelle tilbud, informationer, anbefalinger og vejledninger, konkurrencer samt nyhedsbreve, tilbud på print- og digitale produkter, samt spørgeskemaundersøgelser.
+												<br/><br/>
+												Henvendelserne og behandlingen kan være vedrørende tilbud på aviser – både digitale og på papir – arrangementer, magasiner, e-bøger, bøger, nye apps, film og musik.
+												<br/><br/>
+												Jeg kan til enhver tid begrænse eller tilbagekalde mit samtykke.
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+
+					<!-- state: authorized user, permission checkbox -->
+					<!-- <form class="nlo__email">
+						<div class="nlo__email__text">
+							Tilmeld dig Jyllands-Postens nyhedsbreve og få leveret kniv skap journalistik direkte i din indbakke.
+							<br/>
+							Indtast din e-mail og vælg hvilket indhold du ønsker at modtage.
+						</div>
+						<div class="nlo__email__status">
+							E-mail:
+							<span class="nlo__email__status__content">jensnielsen@gmail.com</span>
+							<a class="nlo__email__status__edit" href="#">Ret</a>
+						</div>
+						<div class="nlo__email__permissions nlo__email__permissions--active">
+							<div class="nlo__checkbox">
+								<input id="nloCheckboxInp" type="checkbox"/>
+								<label for="nloCheckboxInp">Ja, Jyllands-Postens må gerne kontakte mig med tilbud, konkurrencer og  informationer, via mail, sms og telefon. Jeg kan til en hver tid begrænse eller tilbagekalde mit samtykke.</label>
+								<a class="nlo__email__permissions__link" href="#">Læs mere her</a>
+							</div>
+							<div class="nloOverlay">
+								<div class="nloOverlay__bg"></div>
+								<div class="nloOverlay__wrap">
+									<div class="nloOverlay__box">
+										<div class="nloOverlay__header">
+											<a class="nloOverlay__header__close" href="#">
+												<i class="nloOverlay__header__close__icon"></i>
+											</a>
+											<div class="nloOverlay__header__name">Vilkår</div>
+										</div>
+										<div class="nloOverlay__content">
+											<div class="nloOverlay__content__text">
+												Jeg giver samtykke til, at Jyllands-Posten må kontakte mig på mail, sms og telefon med aktuelle tilbud, informationer, anbefalinger og vejledninger, konkurrencer samt nyhedsbreve, tilbud på print- og digitale produkter, samt spørgeskemaundersøgelser.
+												<br/><br/>
+												Henvendelserne og behandlingen kan være vedrørende tilbud på aviser – både digitale og på papir – arrangementer, magasiner, e-bøger, bøger, nye apps, film og musik.
+												<br/><br/>
+												Jeg kan til enhver tid begrænse eller tilbagekalde mit samtykke.
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<button class="nlo__btn">Ok</button>
+						</div>
+					</form> -->
+
+					<!-- state: authorized user, no permission checkbox -->
+					<!-- <form class="nlo__email">
+						<div class="nlo__email__text">
+							Tilmeld dig Jyllands-Postens nyhedsbreve og få leveret kniv skap journalistik direkte i din indbakke.
+							<br/>
+							Indtast din e-mail og vælg hvilket indhold du ønsker at modtage.
+						</div>
+						<div class="nlo__email__status">
+							E-mail:
+							<span class="nlo__email__status__content">jensnielsen@gmail.com</span>
+							<a class="nlo__email__status__edit" href="#">Ret</a>
+						</div>
+					</form> -->
+
+					<section class="nlo__section">
+						<h3 class="nlo__section__header">Notifikationer</h3>
+
+						<div class="nlo__section__list">
+
+							<div class="nlo__section__teaser nlo__section__teaser--bn">
+								<div class="nlo__section__teaser__in">
+									<div class="nlo__section__teaser__header">
+										<div class="nlo__section__teaser__mark">
+											<i class="nlo__section__teaser__mark__icon"></i>
+										</div>
+										<h4 class="nlo__section__teaser__title">Breaking news</h4>
+									</div>
+									<div class="nlo__section__teaser__content">
+										<div class="nlo__section__teaser__subscribe">
+											<a class="nlo__btn" href="#">Tilmeld</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="nlo__section__teaser nlo__section__teaser--selected">
+								<div class="nlo__section__teaser__in">
+									<div class="nlo__section__teaser__header">
+										<figure class="nlo__section__teaser__image">
+											<img class="nlo__section__teaser__image__img" src="img/temp/teaser00.jpg" alt=""/>
+										</figure>
+										<div class="nlo__section__teaser__mark">
+											<i class="nlo__section__teaser__mark__icon"></i>
+										</div>
+										<h4 class="nlo__section__teaser__title">E-avis notifikation</h4>
+									</div>
+									<div class="nlo__section__teaser__content">
+										<div class="nlo__section__teaser__subscribe">
+											<a class="nlo__btn" href="#">Afmeld</a>
+										</div>
+										<div class="nlo__section__teaser__info">udsendes alle dage kl: 21:00</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+					<section class="nlo__section">
+						<h3 class="nlo__section__header">Premium Nyhedsbrev</h3>
+
+						<div class="nlo__section__list">
+
+							<div class="nlo__section__teaser">
+								<div class="nlo__section__teaser__in">
+									<div class="nlo__section__teaser__header">
+										<figure class="nlo__section__teaser__image">
+											<img class="nlo__section__teaser__image__img" src="img/temp/teaser01.jpg" alt=""/>
+										</figure>
+										<div class="nlo__section__teaser__mark">
+											<i class="nlo__section__teaser__mark__icon"></i>
+										</div>
+										<h4 class="nlo__section__teaser__title">Morgen</h4>
+									</div>
+									<div class="nlo__section__teaser__content">
+										<div class="nlo__section__teaser__desc">Et prioriteret udvalg af redaktionelt indhold med fokus.</div>
+										<div class="nlo__section__teaser__link">
+											<a href="#">Se eksempel på nyhedsbrev</a>
+										</div>
+										<div class="nlo__section__teaser__subscribe">
+											<a class="nlo__btn" href="#">Tilmeld</a>
+										</div>
+										<div class="nlo__section__teaser__info">Udsendes alle hverdage kl: 08:00</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="nlo__section__teaser">
+								<div class="nlo__section__teaser__in">
+									<div class="nlo__section__teaser__header">
+										<figure class="nlo__section__teaser__image">
+											<img class="nlo__section__teaser__image__img" src="img/temp/teaser02.jpg" alt=""/>
+										</figure>
+										<div class="nlo__section__teaser__mark">
+											<i class="nlo__section__teaser__mark__icon"></i>
+										</div>
+										<h4 class="nlo__section__teaser__title">Middag</h4>
+									</div>
+									<div class="nlo__section__teaser__content">
+										<div class="nlo__section__teaser__desc">Et prioriteret udvalg af redaktionelt indhold med fokus på baggrund og perspektiv et prioriteret udvalg.</div>
+										<div class="nlo__section__teaser__link">
+											<a href="#">Se eksempel på nyhedsbrev</a>
+										</div>
+										<div class="nlo__section__teaser__subscribe">
+											<a class="nlo__btn" href="#">Tilmeld</a>
+										</div>
+										<div class="nlo__section__teaser__info">Udsendes alle dage kl: 12:00</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="nlo__section__teaser nlo__section__teaser--selected">
+								<div class="nlo__section__teaser__in">
+									<div class="nlo__section__teaser__header">
+										<figure class="nlo__section__teaser__image">
+											<img class="nlo__section__teaser__image__img" src="img/temp/teaser03.jpg" alt=""/>
+										</figure>
+										<div class="nlo__section__teaser__mark">
+											<i class="nlo__section__teaser__mark__icon"></i>
+										</div>
+										<h4 class="nlo__section__teaser__title">Aften</h4>
+									</div>
+									<div class="nlo__section__teaser__content">
+										<div class="nlo__section__teaser__desc">Et prioriteret udvalg af redaktionelt indhold.</div>
+										<div class="nlo__section__teaser__link">
+											<a href="#">Se eksempel på nyhedsbrev</a>
+										</div>
+										<div class="nlo__section__teaser__subscribe">
+											<a class="nlo__btn" href="#">Afmeld</a>
+										</div>
+										<div class="nlo__section__teaser__info">Udsendes alle dage kl: 20:00</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="nlo__section__teaser">
+								<div class="nlo__section__teaser__in">
+									<div class="nlo__section__teaser__header">
+										<figure class="nlo__section__teaser__image">
+											<img class="nlo__section__teaser__image__img" src="img/temp/teaser04.jpg" alt=""/>
+										</figure>
+										<div class="nlo__section__teaser__mark">
+											<i class="nlo__section__teaser__mark__icon"></i>
+										</div>
+										<h4 class="nlo__section__teaser__title">Lørdag</h4>
+									</div>
+									<div class="nlo__section__teaser__content">
+										<div class="nlo__section__teaser__desc">Et prioriteret udvalg af redaktionelt indhold med fokus på baggrund og perspektiv et prioriteret udvalg.</div>
+										<div class="nlo__section__teaser__link">
+											<a href="#">Se eksempel på nyhedsbrev</a>
+										</div>
+										<div class="nlo__section__teaser__subscribe">
+											<a class="nlo__btn" href="#">Tilmeld</a>
+										</div>
+										<div class="nlo__section__teaser__info">Udsendes hver lørdag kl: 12:00</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="nlo__section__teaser">
+								<div class="nlo__section__teaser__in">
+									<div class="nlo__section__teaser__header">
+										<figure class="nlo__section__teaser__image">
+											<img class="nlo__section__teaser__image__img" src="img/temp/teaser05.jpg" alt=""/>
+										</figure>
+										<div class="nlo__section__teaser__mark">
+											<i class="nlo__section__teaser__mark__icon"></i>
+										</div>
+										<h4 class="nlo__section__teaser__title">Søndag</h4>
+									</div>
+									<div class="nlo__section__teaser__content">
+										<div class="nlo__section__teaser__desc">Et prioriteret udvalg.</div>
+										<div class="nlo__section__teaser__link">
+											<a href="#">Se eksempel på nyhedsbrev</a>
+										</div>
+										<div class="nlo__section__teaser__subscribe">
+											<a class="nlo__btn" href="#">Tilmeld</a>
+										</div>
+										<div class="nlo__section__teaser__info">Udsendes hver søndag kl: 12:00</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="nlo__section__teaser">
+								<div class="nlo__section__teaser__in">
+									<div class="nlo__section__teaser__header">
+										<figure class="nlo__section__teaser__image">
+											<img class="nlo__section__teaser__image__img" src="img/temp/teaser06.jpg" alt=""/>
+										</figure>
+										<div class="nlo__section__teaser__mark">
+											<i class="nlo__section__teaser__mark__icon"></i>
+										</div>
+										<h4 class="nlo__section__teaser__title">Indblik</h4>
+									</div>
+									<div class="nlo__section__teaser__content">
+										<div class="nlo__section__teaser__desc">Et prioriteret udvalg af redaktionelt indhold med fokus på baggrund og perspektiv.</div>
+										<div class="nlo__section__teaser__link">
+											<a href="#">Se eksempel på nyhedsbrev</a>
+										</div>
+										<div class="nlo__section__teaser__subscribe">
+											<a class="nlo__btn" href="#">Tilmeld</a>
+										</div>
+										<div class="nlo__section__teaser__info">Udsendes alle dage kl: 20:00</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+					<section class="nlo__section">
+						<h3 class="nlo__section__header">Nyhedsoverblik</h3>
+
+						<div class="nlo__section__list">
+
+							<div class="nlo__section__teaser">
+								<div class="nlo__section__teaser__in">
+									<div class="nlo__section__teaser__header">
+										<figure class="nlo__section__teaser__image">
+											<img class="nlo__section__teaser__image__img" src="img/temp/teaser07.jpg" alt=""/>
+										</figure>
+										<div class="nlo__section__teaser__mark">
+											<i class="nlo__section__teaser__mark__icon"></i>
+										</div>
+										<h4 class="nlo__section__teaser__title">Politik</h4>
+									</div>
+									<div class="nlo__section__teaser__content">
+										<div class="nlo__section__teaser__desc">Et prioriteret udvalg af redaktionelt indhold med fokus på baggrund og perspektiv.</div>
+										<div class="nlo__section__teaser__link">
+											<a href="#">Se eksempel på nyhedsbrev</a>
+										</div>
+										<div class="nlo__section__teaser__subscribe">
+											<a class="nlo__btn" href="#">Tilmeld</a>
+										</div>
+										<div class="nlo__section__teaser__info">Udsendes hver dag kl: 08:00</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="nlo__section__teaser nlo__section__teaser--selected">
+								<div class="nlo__section__teaser__in">
+									<div class="nlo__section__teaser__header">
+										<figure class="nlo__section__teaser__image">
+											<img class="nlo__section__teaser__image__img" src="img/temp/teaser08.jpg" alt=""/>
+										</figure>
+										<div class="nlo__section__teaser__mark">
+											<i class="nlo__section__teaser__mark__icon"></i>
+										</div>
+										<h4 class="nlo__section__teaser__title">International</h4>
+									</div>
+									<div class="nlo__section__teaser__content">
+										<div class="nlo__section__teaser__desc">Et prioriteret udvalg af redaktionelt indhold.</div>
+										<div class="nlo__section__teaser__link">
+											<a href="#">Se eksempel på nyhedsbrev</a>
+										</div>
+										<div class="nlo__section__teaser__subscribe">
+											<a class="nlo__btn" href="#">Afmeld</a>
+										</div>
+										<div class="nlo__section__teaser__info">Udsendes hver dag kl: 08:00</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="nlo__section__teaser">
+								<div class="nlo__section__teaser__in">
+									<div class="nlo__section__teaser__header">
+										<figure class="nlo__section__teaser__image">
+											<img class="nlo__section__teaser__image__img" src="img/temp/teaser09.jpg" alt=""/>
+										</figure>
+										<div class="nlo__section__teaser__mark">
+											<i class="nlo__section__teaser__mark__icon"></i>
+										</div>
+										<h4 class="nlo__section__teaser__title">Sport</h4>
+									</div>
+									<div class="nlo__section__teaser__content">
+										<div class="nlo__section__teaser__desc">Et prioriteret udvalg af redaktionelt indhold med fokus på baggrund.</div>
+										<div class="nlo__section__teaser__link">
+											<a href="#">Se eksempel på nyhedsbrev</a>
+										</div>
+										<div class="nlo__section__teaser__subscribe">
+											<a class="nlo__btn" href="#">Tilmeld</a>
+										</div>
+										<div class="nlo__section__teaser__info">Udsendes hver dag kl: 08:00</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="nlo__section__teaser">
+								<div class="nlo__section__teaser__in">
+									<div class="nlo__section__teaser__header">
+										<figure class="nlo__section__teaser__image">
+											<img class="nlo__section__teaser__image__img" src="img/temp/teaser10.jpg" alt=""/>
+										</figure>
+										<div class="nlo__section__teaser__mark">
+											<i class="nlo__section__teaser__mark__icon"></i>
+										</div>
+										<h4 class="nlo__section__teaser__title">Livsstil</h4>
+									</div>
+									<div class="nlo__section__teaser__content">
+										<div class="nlo__section__teaser__desc">Et prioriteret udvalg af redaktionelt indhold med fokus på baggrund og perspektiv et prioriteret udvalg.</div>
+										<div class="nlo__section__teaser__link">
+											<a href="#">Se eksempel på nyhedsbrev</a>
+										</div>
+										<div class="nlo__section__teaser__subscribe">
+											<a class="nlo__btn" href="#">Tilmeld</a>
+										</div>
+										<div class="nlo__section__teaser__info">Udsendes hver dag kl: 08:00</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="nlo__section__teaser">
+								<div class="nlo__section__teaser__in">
+									<div class="nlo__section__teaser__header">
+										<figure class="nlo__section__teaser__image">
+											<img class="nlo__section__teaser__image__img" src="img/temp/teaser11.jpg" alt=""/>
+										</figure>
+										<div class="nlo__section__teaser__mark">
+											<i class="nlo__section__teaser__mark__icon"></i>
+										</div>
+										<h4 class="nlo__section__teaser__title">Kultur</h4>
+									</div>
+									<div class="nlo__section__teaser__content">
+										<div class="nlo__section__teaser__desc">Et prioriteret udvalg af redaktionelt indhold med fokus på baggrund.</div>
+										<div class="nlo__section__teaser__link">
+											<a href="#">Se eksempel på nyhedsbrev</a>
+										</div>
+										<div class="nlo__section__teaser__subscribe">
+											<a class="nlo__btn" href="#">Tilmeld</a>
+										</div>
+										<div class="nlo__section__teaser__info">Udsendes hver dag kl: 08:00</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="nlo__section__teaser">
+								<div class="nlo__section__teaser__in">
+									<div class="nlo__section__teaser__header">
+										<figure class="nlo__section__teaser__image">
+											<img class="nlo__section__teaser__image__img" src="img/temp/teaser12.jpg" alt=""/>
+										</figure>
+										<div class="nlo__section__teaser__mark">
+											<i class="nlo__section__teaser__mark__icon"></i>
+										</div>
+										<h4 class="nlo__section__teaser__title">Aarhus</h4>
+									</div>
+									<div class="nlo__section__teaser__content">
+										<div class="nlo__section__teaser__desc">Et prioriteret udvalg af redaktionelt indhold med fokus på baggrund og perspektiv.</div>
+										<div class="nlo__section__teaser__link">
+											<a href="#">Se eksempel på nyhedsbrev</a>
+										</div>
+										<div class="nlo__section__teaser__subscribe">
+											<a class="nlo__btn" href="#">Tilmeld</a>
+										</div>
+										<div class="nlo__section__teaser__info">Udsendes hver dag kl: 08:00</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="nlo__section__teaser nlo__section__teaser--selected">
+								<div class="nlo__section__teaser__in">
+									<div class="nlo__section__teaser__header">
+										<figure class="nlo__section__teaser__image">
+											<img class="nlo__section__teaser__image__img" src="img/temp/teaser13.jpg" alt=""/>
+										</figure>
+										<div class="nlo__section__teaser__mark">
+											<i class="nlo__section__teaser__mark__icon"></i>
+										</div>
+										<h4 class="nlo__section__teaser__title">Debat</h4>
+									</div>
+									<div class="nlo__section__teaser__content">
+										<div class="nlo__section__teaser__desc">Et prioriteret udvalg.</div>
+										<div class="nlo__section__teaser__link">
+											<a href="#">Se eksempel på nyhedsbrev</a>
+										</div>
+										<div class="nlo__section__teaser__subscribe">
+											<a class="nlo__btn" href="#">Afmeld</a>
+										</div>
+										<div class="nlo__section__teaser__info">Udsendes hver dag kl: 08:00</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="nlo__section__teaser">
+								<div class="nlo__section__teaser__in">
+									<div class="nlo__section__teaser__header">
+										<figure class="nlo__section__teaser__image">
+											<img class="nlo__section__teaser__image__img" src="img/temp/teaser14.jpg" alt=""/>
+										</figure>
+										<div class="nlo__section__teaser__mark">
+											<i class="nlo__section__teaser__mark__icon"></i>
+										</div>
+										<h4 class="nlo__section__teaser__title">Viden</h4>
+									</div>
+									<div class="nlo__section__teaser__content">
+										<div class="nlo__section__teaser__desc">Et prioriteret udvalg af redaktionelt indhold med fokus på baggrund og perspektiv.</div>
+										<div class="nlo__section__teaser__link">
+											<a href="#">Se eksempel på nyhedsbrev</a>
+										</div>
+										<div class="nlo__section__teaser__subscribe">
+											<a class="nlo__btn" href="#">Tilmeld</a>
+										</div>
+										<div class="nlo__section__teaser__info">Udsendes hver dag kl: 08:00</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+					<section class="nlo__info">
+						<h3 class="nlo__info__header">Permissions</h3>
+						<div class="nlo__info__content">
+							<div class="nlo__info__text">
+								<div class="nlo__info__text__title">Du har tidligere godkendt følgende vilkår:</div>
+								Jeg giver samtykke til, at Jyllands-Posten må kontakte mig på mail, sms og telefon med aktuelle tilbud, informationer, anbefalinger og vejledninger, konkurrencer samt nyhedsbreve, tilbud på print- og digitale produkter, samt spørgeskemaundersøgelser.
+								<br/><br/>
+								Henvendelserne og behandlingen kan være vedrørende tilbud på aviser – både digitale og på papir – arrangementer, magasiner, e-bøger, bøger, nye apps, film og musik.
+								<br/><br/>
+								Godkendt 19.07.2017
+							</div>
+							<div class="nlo__info__action">
+								<a class="nlo__btn nlo__btn--reverted" href="#">Annuller</a>
+							</div>
+
+							<!-- state: cancelled subscription -->
+							<!-- <div class="nlo__info__msg">
+								<div class="nlo__info__msg__in">
+									Vi har registreret at du ikke længere ønsker at vi kontakter dig.
+								</div>
+							</div> -->
+
+						</div>
+					</section>
+
+				</div>
+			</div>
+		</div>
+
+		<script>
+			let nloOverlay = document.getElementsByClassName('nloOverlay')[0];
+
+			document.getElementsByClassName('nlo__email__permissions__link')[0].addEventListener('click', function(e) {
+				e.preventDefault();
+				nloOverlay.className += ' nloOverlay--active';
+			});
+
+			document.getElementsByClassName('nloOverlay__header__close')[0].addEventListener('click', function(e) {
+				e.preventDefault();
+				nloOverlay.className = nloOverlay.className.replace(/ nloOverlay--active/g, '');
+			});
+		</script>
+	</body>
+</html>

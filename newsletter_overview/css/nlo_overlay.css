@@ -1,0 +1,145 @@
+/* NLO - Newsletter Overview */
+
+/* ----- START NLO overlay ----- */
+.nloOverlay {
+	display: none;
+	text-align: left;
+}
+.nloOverlay--active {
+	display: block;
+}
+.nloOverlay__bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2000;
+	opacity: 0.2;
+	width: 100%;
+	height: 100%;
+	background: #000;
+}
+.nloOverlay__wrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2001;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+	width: 100%;
+	height: 100%;
+}
+.nloOverlay__box {
+	display: flex;
+    flex-direction: column;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	font: 16px/normal 'GuardianEgyptian', Georgia, serif;
+	color: #000;
+}
+.nloOverlay__header {
+	position: relative;
+	flex: 0 0 auto;
+	padding: 34px 10px 15px;
+	background: #000;
+	text-align: center;
+	color: #fff;
+}
+.nloOverlay__header__name {
+	line-height: 30px;
+	font-size: 24px;
+	font-weight: bold;
+}
+.nloOverlay__header__close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	padding: 14px 13px;
+	cursor: pointer;
+}
+.nloOverlay__header__close__icon {
+	position: relative;
+	display: block;
+	width: 20px;
+	height: 20px;
+}
+.nloOverlay__header__close__icon:before, 
+.nloOverlay__header__close__icon:after {
+	content: '';
+	position: absolute;
+	top: 8px;
+	left: 0;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	display: block;
+	width: 20px;
+	height: 4px;
+	background: white;
+}
+.nloOverlay__header__close__icon:after {
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+.nloOverlay__content {
+	flex: 1 1 auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+	box-sizing: border-box;
+    height: 100%;
+}
+.nloOverlay__content__text {
+	margin-bottom: 24px;
+	padding: 28px 10px 0;
+	line-height: 24px;
+	font-size: 17px;
+}
+.nloOverlay__content__text p {
+	margin: 0 0 24px;
+}
+/* ----- END NLO overlay ----- */
+
+/* ----- START layout for screen >= 800px ----- */
+@media screen and (min-width:800px) {
+	/* ----- START NLO overlay ----- */
+	.nloOverlay__box {
+		width: 90%;
+		max-width: 800px;
+		height: auto;
+		max-height: 90%;
+		box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+	}
+	.nloOverlay__header {
+		padding: 27px 78px 21px;
+		text-align: left;
+	}
+	.nloOverlay__header__name {
+		line-height: 40px;
+		font-size: 30px;
+	}
+	.nloOverlay__header__close {
+		top: 14px;
+		right: 16px;
+		padding: 10px;
+	}
+	.nloOverlay__header__close__icon {
+		width: 25px;
+		height: 25px;
+	}
+	.nloOverlay__header__close__icon:before, 
+	.nloOverlay__header__close__icon:after {
+		top: 10px;
+		width: 25px;
+		height: 5px;
+	}
+	.nloOverlay__content {
+		border: 1px solid #ccc;
+		border-top: 0;
+	}
+	.nloOverlay__content__text {
+		padding: 24px 75px 0;
+	}
+	/* ----- END NLO overlay ----- */
+}
+/* ----- END layout for screen >= 800px ----- */

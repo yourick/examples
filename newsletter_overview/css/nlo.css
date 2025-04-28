@@ -1,0 +1,505 @@
+/* NLO - Newsletter Overview */
+
+/* ----- START NLO basics ----- */
+/* START NLO custom font */
+@font-face {
+	font-family: 'GuardianEgyptian';
+	src: url('fonts/GuardianEgyp-Regular.woff') format('woff');
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'GuardianEgyptian';
+	src: url('fonts/GuardianEgyp-Medium.woff') format('woff');
+	font-weight: 500;
+}
+@font-face {
+	font-family: 'GuardianEgyptian';
+	src: url('fonts/GuardianEgyp-Semibold.woff') format('woff');
+	font-weight: 600;
+}
+@font-face {
+	font-family: 'GuardianEgyptian';
+	src: url('fonts/GuardianEgyp-Bold.woff') format('woff');
+	font-weight: bold;
+}
+/* END NLO custom font */
+
+/* START NLO links */
+.nlo a {
+	text-decoration: none;
+	color: #006860;
+}
+.nlo a:hover {
+	text-decoration: underline;
+	color: #006860;
+}
+/* END NLO links */
+
+/* START NLO button */
+.nlo__btn {
+	display: block;
+	max-width: 120px;
+	margin: 0 auto;
+	padding: 6px 9px;
+	border: 1px solid #006860;
+	border-radius: 1000px;
+	background: #006860;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	font: bold 14px/18px Arial, sans-serif;
+	color: #fff;
+	cursor: pointer;
+}
+.nlo__btn:hover {
+	text-decoration: underline;
+	color: #fff;
+}
+input.nlo__btn,
+button.nlo__btn {
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+	outline: none;
+}
+input.nlo__btn::-moz-focus-inner,
+button.nlo__btn::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+.nlo a.nlo__btn,
+.nlo a.nlo__btn:hover {
+	color: #fff;
+}
+.nlo__btn--reverted {
+	border: 1px solid #6b6b6b;
+	background: #fff;
+	color: #000;
+}
+.nlo__btn--reverted:hover {
+	color: #000;
+}
+.nlo a.nlo__btn--reverted,
+.nlo a.nlo__btn--reverted:hover {
+	color: #000;
+}
+/* END NLO button */
+
+/* START NLO input */
+.nlo__inp {
+	display: block;
+	min-height: 18px;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+	padding: 6px 14px;
+	border: 1px solid #999;
+	border-radius: 1000px;
+	background: #fff;
+	box-shadow: inset 0 5px 6px -5px rgba(0,0,0,0.5);
+	font: 15px/18px Arial, sans-serif;
+	color: #000;
+}
+input.nlo__inp,
+button.nlo__inp {
+	outline: none;
+}
+/* END NLO input */
+
+/* START NLO checkbox */
+.nlo__checkbox {
+	position: relative;
+	padding: 1px 0 0 30px;
+}
+.nlo__checkbox input[type="checkbox"] {
+	position: absolute;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+}
+.nlo__checkbox label {
+	margin-left: -30px;
+	padding-left: 30px;
+	cursor: pointer;
+}
+.nlo__checkbox label:before {
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 18px;
+	height: 18px;
+	border: 1px solid #999;
+	border-radius: 5px;
+	background: #fff;
+}
+.nlo__checkbox label:after {
+	content: " ";
+	position: absolute;
+	top: 4px;
+	left: 7px;
+	display: block;
+	width: 4px;
+	height: 8px;
+	border-right: 2px solid #006860;
+	border-bottom: 2px solid #006860;
+	-webkit-transform: rotate(30deg);
+	transform: rotate(30deg);
+	opacity: 0;
+}
+.nlo__checkbox input[type="checkbox"]:checked + label:after {
+	opacity: 1;
+}
+/* END NLO checkbox */
+/* ----- END NLO basics ----- */
+
+/* ----- START NLO layout ----- */
+.nlo {
+	max-width: 940px;
+	margin: 0 auto;
+	padding: 0 10px;
+	font: 16px/normal 'GuardianEgyptian', Georgia, serif;
+	color: #000;
+}
+.nlo__in1 {
+	padding: 9px 9px 0 9px;
+	border: 1px solid #999;
+	border-bottom: none;
+	background: #fff;
+}
+.nlo__in2 {
+	padding: 10px 0 90px;
+	background: #eee;
+}
+/* ----- END NLO layout ----- */
+
+/* ----- START NLO email ----- */
+.nlo__email {
+	margin: 0 10px 25px;
+	padding: 10px 0 31px;
+	border-bottom: 1px solid #999;
+}
+.nlo__email__text {
+	line-height: 20px;
+	font-size: 17px;
+}
+.nlo__email__status {
+	margin: 23px 0 12px;
+	line-height: 30px;
+	font-size: 24px;
+	font-weight: 600;
+}
+.nlo__email__status__content {
+	margin-right: 7px;
+}
+.nlo__email__status__edit {
+	line-height: 20px;
+	font-size: 16px;
+	font-weight: normal;
+}
+.nlo__email__data {
+	margin-top: -4px;
+}
+.nlo__email__data:after {
+	content: " ";
+	clear: both;
+	display: table;
+}
+.nlo__email__data .nlo__inp {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 32px;
+}
+.nlo__email__data .nlo__btn {
+	width: 120px;
+	margin-top: 15px;
+}
+.nlo__email__permissions {
+	position: relative;
+	min-height: 37px;
+	margin-top: 10px;
+	line-height: 19px;
+	font-size: 16px;
+	color: #888;
+}
+.nlo__email__permissions:after {
+	content: " ";
+	clear: both;
+	display: table;
+}
+.nlo__email__permissions .nlo__checkbox {
+	max-width: 770px;
+}
+.nlo__email__permissions .nlo__checkbox label {
+	margin-right: 3px;
+}
+.nlo__email__permissions__link {
+	white-space: nowrap;
+}
+.nlo__email__permissions .nlo__btn {
+	width: 120px;
+	margin-top: 15px;
+}
+/* ----- END NLO email ----- */
+
+/* ----- START NLO section ----- */
+.nlo__section__header {
+	margin: 20px 0 3px;
+	padding: 0 10px;
+	font: 600 24px/30px 'GuardianEgyptian', Georgia, serif;
+}
+
+/* START NLO teaser list */
+.nlo__section__list {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+.nlo__section__teaser {
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+}
+.nlo__section__teaser__in {
+	background: #fff;
+}
+/* END NLO teaser list */
+
+/* START NLO teaser header */
+.nlo__section__teaser__header {
+	position: relative;
+	background: #999;
+}
+.nlo__section__teaser__header:before {
+	content: '';
+	display: block;
+	height: 0;
+	padding-top: 40%;
+}
+.nlo__section__teaser__image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+.nlo__section__teaser__image__img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.nlo__section__teaser__mark {
+	display: none;
+	position: absolute;
+	right: 6px;
+	top: 5px;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: #006860;
+}
+.nlo__section__teaser__mark__icon {
+	position: relative;
+	top: 8px;
+	left: 8px;
+	display: block;
+	width: 15px;
+	height: 15px;
+	overflow: hidden;
+}
+.nlo__section__teaser__mark__icon:before {
+	content: " ";
+	position: relative;
+	top: -6px;
+	left: -5px;
+	display: block;
+	width: 14px;
+	height: 14px;
+	border-right: 3px solid #fff;
+	border-bottom: 3px solid #fff;
+	-webkit-transform: rotate(30deg);
+	transform: rotate(30deg);
+}
+.nlo__section__teaser__title {
+	position: absolute;
+	left: 15px;
+	bottom: 9px;
+	margin: 0;
+	font: 600 20px/26px 'GuardianEgyptian', Georgia, serif;
+	color: #fff;
+}
+/* END NLO teaser header */
+
+/* START NLO teaser content */
+.nlo__section__teaser__content {
+	padding: 10px 14px 16px;
+	border: 1px solid #999;
+	border-top: none;
+}
+.nlo__section__teaser__desc {
+	line-height: 20px;
+	font-size: 15px;
+	color: #333;
+}
+.nlo__section__teaser__link {
+	margin-top: 12px;
+	text-transform: uppercase;
+	font: 11px/14px Arial, sans-serif;
+	color: #999;
+}
+.nlo__section__teaser__subscribe {
+	margin: 23px 0 19px;
+}
+.nlo__section__teaser__subscribe:first-child {
+	margin-top: 17px;
+}
+.nlo__section__teaser__info {
+	margin-top: -14px;
+	text-align: center;
+	text-transform: uppercase;
+	font: 11px/14px Arial, sans-serif;
+	color: #999;
+}
+/* END NLO teaser content */
+
+/* START NLO breaking news teaser */
+.nlo__section__teaser--bn .nlo__section__teaser__header {
+	background: #ffff0b;
+}
+.nlo__section__teaser--bn .nlo__section__teaser__title {
+	bottom: 12px;
+	width: 150px;
+	text-transform: uppercase;
+	font: 900 22px/1em 'Arial Black', Arial, sans-serif;
+	letter-spacing: -0.03em;
+	color: #000;
+}
+/* END NLO breaking news teaser */
+
+/* START NLO teaser selected */
+.nlo__section__teaser--selected .nlo__btn {
+	border: 1px solid #6b6b6b;
+	background: #fff;
+	color: #000;
+}
+.nlo__section__teaser--selected a.nlo__btn,
+.nlo__section__teaser--selected a.nlo__btn:hover {
+	color: #000;
+}
+.nlo__section__teaser--selected .nlo__section__teaser__mark {
+	display: block;
+}
+/* END NLO teaser selected */
+/* ----- END NLO section ----- */
+
+/* ----- START NLO info ----- */
+.nlo__info {
+	margin-top: 18px;
+	padding: 10px;
+}
+.nlo__info__header {
+	margin: 0 0 13px;
+	font: 600 24px/30px 'GuardianEgyptian', Georgia, serif;
+}
+.nlo__info__content {
+	padding: 20px;
+	border: 1px solid #999;
+	background: #fff;
+	line-height: 20px;
+	font-size: 15px;
+	color: #333;
+}
+.nlo__info__text__title {
+	margin-bottom: 9px;
+	line-height: 22px;
+	font-size: 16px;
+	font-weight: 600;
+	color: #000;
+}
+.nlo__info__action {
+	margin-top: 30px;
+}
+.nlo__info__action .nlo__btn {
+	margin-right: 0;
+}
+.nlo__info__msg {
+	display: table;
+	width: 100%;
+	max-width: 440px;
+	height: 233px;
+	margin: 0 auto;
+}
+.nlo__info__msg__in {
+	display: table-cell;
+	padding-bottom: 45px;
+	vertical-align: middle;
+	text-align: center;
+	line-height: 30px;
+	font-size: 24px;
+}
+/* ----- END NLO info ----- */
+
+/* ----- START layout for screen >= 660px ----- */
+@media screen and (min-width:660px) {
+	/* ----- START NLO layout ----- */
+	.nlo__in2 {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	/* ----- END NLO layout ----- */
+
+	/* ----- START NLO email ----- */
+	.nlo__email__data .nlo__inp {
+		float: left;
+		-webkit-box-sizing: content-box;
+		box-sizing: content-box;
+		width: 380px;
+		min-height: 18px;
+		margin-right: 10px;
+	}
+	.nlo__email__data .nlo__btn {
+		float: left;
+		margin-top: 0;
+	}
+	.nlo__email__permissions--active .nlo__checkbox {
+		margin-right: 180px;
+	}
+	.nlo__email__permissions--active .nlo__btn {
+		position: absolute;
+		top: 5px;
+		right: 10px;
+		margin: 0;
+	}
+	/* ----- END NLO email ----- */
+
+	/* ----- START NLO section ----- */
+	.nlo__section__teaser {
+		width: 50%;
+	}
+	.nlo__section__teaser__desc {
+		min-height: 60px;
+	}
+	/* ----- END NLO section ----- */
+}
+/* ----- END layout for screen >= 660px ----- */
+
+/* ----- START layout for screen >= 960px ----- */
+@media screen and (min-width:960px) {
+	/* ----- START NLO email ----- */
+	.nlo__email__data .nlo__inp {
+		width: 480px;
+	}
+	/* ----- END NLO email ----- */
+
+	/* ----- START NLO section ----- */
+	.nlo__section__teaser {
+		width: 33.33%;
+	}
+	/* ----- END NLO section ----- */
+}
+/* ----- END layout for screen >= 960px ----- */
